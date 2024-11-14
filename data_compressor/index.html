@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Compressor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.11/pako.min.js"></script> <!-- Include pako -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="email"] {
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #downloadLink {
+            display: none;
+            margin-top: 15px;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #message {
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Compressor</h1>
+        <input type="text" id="nameInput" placeholder="Name" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <input type="text" id="phoneInput" placeholder="Phone Number" required>
+        <input type="file" id="fileInput" required>
+        <button id="compressButton">Compress</button>
+        <a id="downloadLink" href="#" download></a>
+        <div id="message"></div>
+    </div>
+    
+    <script src="script.js"></script> <!-- Include the external script -->
+</body>
+</html>
